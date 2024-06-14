@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 7</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        li.selecionado {
+            background-color: #d38080c9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de itens</h1>
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        var lista = document.getElementById("lista");
+        var itensLista = lista.getElementsByTagName("li");
+
+        for (var i = 0; i < itensLista.length; i++) {
+            itensLista[i].addEventListener("click", function() {
+                selecionarItem(this);
+            });
+        }
+
+        function selecionarItem(item) {
+            var itemAtual = document.querySelector(".selecionado");
+            if (itemAtual) {
+                itemAtual.classList.remove("selecionado");
+            }
+            item.classList.add("selecionado");
+        }
+    </script>
+</body>
+</html>

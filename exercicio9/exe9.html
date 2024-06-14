@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 9</title>
+    <style>
+        .escondido {
+            display: none;
+        }
+
+        .visivel {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elemento com classes alternadas</h1>
+    <div id="elemento" class="escondido">Um elemento que pode ser mostrado ou escondido.</div>
+    <button onclick="alternarClasse()">Alternar classe</button>
+
+    <script>
+        function alternarClasse() {
+            var elemento = document.getElementById("elemento");
+
+            if (elemento.classList.contains("escondido")) {
+                elemento.classList.remove("escondido");
+                elemento.classList.add("visivel");
+            } else {
+                elemento.classList.remove("visivel");
+                elemento.classList.add("escondido");
+            }
+        }
+    </script>
+</body>
+</html>

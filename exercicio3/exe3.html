@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <div id="myDiv" style="width: 200px; height: 100px; background-color: red;"></div>
+    <button onclick="mudarCor()">alterar cor</button>
+    <script>
+        function mudarCor() {
+            const divElement = document.getElementById('myDiv');
+            divElement.style.backgroundColor = 'blue';
+            divElement.style.width = '300px';
+        }
+    </script>
+</body>
+</html>

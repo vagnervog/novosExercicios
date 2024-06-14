@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 6</title>
+</head>
+<body>
+    <h1>Digite no campo abaixo:</h1>
+    <input type="text" id="campoEntrada" onkeyup="atualizarParagrafo()">
+    <p id="paragrafo"></p>
+
+    <script>
+        function atualizarParagrafo() {
+            var campoEntrada = document.getElementById("campoEntrada");
+            var paragrafo = document.getElementById("paragrafo");
+            paragrafo.textContent = campoEntrada.value;
+        }
+    </script>
+</body>
+</html>
